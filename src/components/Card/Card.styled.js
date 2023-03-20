@@ -4,8 +4,7 @@ import background from "assets/images/background.png";
 export const CardStyled = styled.div`
   position: relative;
   margin: 0 auto;
-  width: 100%;
-  max-width: 380px;
+  width: 380px;
   padding: 28px 36px 36px 36px;
   text-align: center;
   text-transform: uppercase;
