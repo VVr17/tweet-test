@@ -1,11 +1,11 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   body {
-    font-family: ${({ theme }) => theme.fontFamily.roboto};
+    font-family: ${({ theme }) => theme.fontFamily.montserrat};
     font-weight: ${({ theme }) => theme.fontWeight.medium};
-    font-size: ${({ theme }) => theme.fontSizes.s};;
-    color: ${({ theme }) => theme.colors.mainText}; 
+    font-size: ${({ theme }) => theme.fontSizes.m};;
+    color: ${({ theme }) => theme.colors.accent}; 
     background-color: ${({ theme }) => theme.colors.mainBackground};
   }
 

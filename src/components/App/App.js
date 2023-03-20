@@ -1,24 +1,14 @@
-import React, { Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
-import Loader from "components/Loader";
-import { Characters, Details, Layout } from "./lazyLoading";
+import React from "react";
+import { Box } from "components/Box/Box";
+import Card from "components/Card";
 import { GlobalStyle } from "./App.styled";
 
 const App = () => {
   return (
-    <>
-      <Suspense fallback={<Loader />}>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Characters />} />
-            <Route path="/:characterId" element={<Details />} />
-          </Route>
-        </Routes>
-      </Suspense>
+    <Box as="main" py="32px" px="16px">
+      <Card />
       <GlobalStyle />
-      <ToastContainer autoClose={3000} limit={1} />
-    </>
+    </Box>
   );
 };
 
