@@ -1,7 +1,7 @@
-import Button from "components/UI-Kit/Button";
 import React, { useEffect, useState } from "react";
-import Logo from "assets/icons/logo_GoIt.svg";
 import Avatar from "./Avatar";
+import Logo from "assets/icons/logo_GoIt.svg";
+import Button from "components/UI-Kit/Button";
 import { CardStyled, LogoStyled, Text, UpperContainer } from "./Card.styled";
 
 const Card = () => {
@@ -18,13 +18,13 @@ const Card = () => {
     localStorage.setItem("followers", followers.toString());
   }, [followers]);
 
-  const getButtonStatus = (followers) => {
-    return followers === 100500 ? "Follow" : "Following";
-  };
-
   const getVisibleFollowers = (followers) => {
     const str = followers.toString();
     return str.slice(0, -3) + "," + str.slice(-3);
+  };
+
+  const getButtonStatus = (followers) => {
+    return followers === 100500 ? "Follow" : "Following";
   };
 
   const handleClick = () => {
@@ -44,8 +44,7 @@ const Card = () => {
       </UpperContainer>
       <Avatar />
       <Text> 777 tweets</Text>
-      {followers && <Text>{getVisibleFollowers(followers)} Followers</Text>}
-
+      <Text>{getVisibleFollowers(followers)} Followers</Text>
       <Button onClick={handleClick} name={buttonStatus}>
         {buttonStatus}
       </Button>

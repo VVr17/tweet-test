@@ -1,10 +1,10 @@
 import React from "react";
+import User from "assets/icons/users/Hansel.svg";
 import {
   AvatarBorderStyled,
   AvatarWrapperStyled,
   WrapperStyled,
 } from "./Avatar.styled";
-import User from "assets/icons/users/Hansel.svg";
 
 const Avatar = () => {
   return (
